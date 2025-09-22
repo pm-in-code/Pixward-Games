@@ -36,7 +36,7 @@ export const METRICS = [
 ];
 
 export const SOCIALS = [
-  { name: 'X', href: 'https://x.com', icon: 'twitter' },
+  { name: 'X', href: 'https://x.com/PixwardG', icon: 'twitter' },
   { name: 'Telegram', href: 'https://t.me', icon: 'telegram' },
   { name: 'Twitch', href: 'https://twitch.tv', icon: 'twitch' },
 ];
