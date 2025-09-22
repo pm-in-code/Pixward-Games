@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { NAV_LINKS } from '@/constants/content';
-import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Navbar() {
   return (
@@ -17,7 +16,6 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <a href="#cta" className="rounded-full bg-white/10 px-5 py-2 text-sm font-medium hover:bg-white/20">
             Pre-registration
           </a>

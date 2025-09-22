@@ -6,13 +6,17 @@ import Metrics from '@/components/Metrics';
 import Footer from '@/components/Footer';
 import CarouselSlide from '@/components/CarouselSlide';
 import Team from '@/components/Team';
+import PreRegistrationForm from '@/components/PreRegistrationForm';
 import { SEO } from '@/constants/content';
 
 import IMG1 from '@/public/assets/BossFighters/BF_KeyArt.jpg';
 import IMG2 from '@/public/assets/Cubox/Cubox KeyArt.png';
 import IMG3 from '@/public/assets/Kingless Land/KL_KeyArt_banner2.png';
 
-const SMALL_LOGO = 'http://localhost:3845/assets/eec6ce7eb84c50316f0eeabb307dc00da5b79e21.png';
+// Логотипы игр
+import BOSS_FIGHTERS_LOGO from '@/public/assets/BossFighters/BFAward1.png';
+import CUBOX_LOGO from '@/public/assets/Cubox/CuboxLogo.png';
+import KINGLESS_LOGO from '@/public/assets/Kingless Land/fractions.png';
 
 export default function HomePage() {
   return (
@@ -39,47 +43,28 @@ export default function HomePage() {
               description="$BFT is the only utility token in BOSS FIGHTERS, fuelling the player-driven economy. Collect $BFT by playing with limited-supply Badges, which generate token rewards and can be upgraded for increased rarity and token yield."
               background={IMG1}
               genres={["Action","Strategy","RPG"]}
-              logo={SMALL_LOGO}
+              logo={BOSS_FIGHTERS_LOGO}
             />
             <CarouselSlide
-              heading="Boss Fighters"
-              description="$BFT is the only utility token in BOSS FIGHTERS, fuelling the player-driven economy. Collect $BFT by playing with limited-supply Badges, which generate token rewards and can be upgraded for increased rarity and token yield."
+              heading="Cubox.io"
+              description="Cubox.io is a thrilling adventure where you build, fight, and explore unique biomes. Choose paths like Winter or Hell, battle fierce monsters, and customize your playstyle with powerful gear. Lead armies, craft, and create your dream home. Join friends or guilds, conquer challenges, and uncover endless surprises in this ever-evolving world."
               background={IMG2}
               genres={["Action","Strategy","RPG"]}
-              logo={SMALL_LOGO}
+              logo={CUBOX_LOGO}
             />
             <CarouselSlide
-              heading="Boss Fighters"
-              description="$BFT is the only utility token in BOSS FIGHTERS, fuelling the player-driven economy. Collect $BFT by playing with limited-supply Badges, which generate token rewards and can be upgraded for increased rarity and token yield."
+              heading="Kingless Land"
+              description="Land Without a King is an open-world wargame where turn-based tactical battles, military strategy, and RPG mechanics intersect on equal footing. Choose your path from 6 character classes, build a mighty army, and claim what is yours — by right of blood or by right of the sword!"
               background={IMG3}
               genres={["Action","Strategy","RPG"]}
-              logo={SMALL_LOGO}
+              logo={KINGLESS_LOGO}
             />
           </div>
         </section>
         <Features />
         <Team />
         <Metrics />
-        <section id="cta" className="mx-auto max-w-7xl px-4 py-16">
-          <form className="mx-auto max-w-xl rounded-2xl bg-white/5 p-6" aria-label="Pre-registration form">
-            <h3 className="text-center">Pre-registration</h3>
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <label className="flex flex-col gap-1">
-                <span className="text-sm text-white/70">First name</span>
-                <input className="rounded-lg bg-white/10 p-3 outline-none focus:ring-2 focus:ring-primary" placeholder="Jane" />
-              </label>
-              <label className="flex flex-col gap-1">
-                <span className="text-sm text-white/70">Last name</span>
-                <input className="rounded-lg bg-white/10 p-3 outline-none focus:ring-2 focus:ring-primary" placeholder="Doe" />
-              </label>
-              <label className="md:col-span-2 flex flex-col gap-1">
-                <span className="text-sm text-white/70">Email</span>
-                <input type="email" className="rounded-lg bg-white/10 p-3 outline-none focus:ring-2 focus:ring-primary" placeholder="you@example.com" />
-              </label>
-            </div>
-            <button type="submit" className="mt-6 w-full rounded-full bg-white/10 px-6 py-3 font-medium hover:bg-white/20">Join the waitlist</button>
-          </form>
-        </section>
+        <PreRegistrationForm />
       </main>
       <Footer />
     </>

@@ -25,9 +25,9 @@ export default function Team() {
   return (
     <section id="team" className="mx-auto max-w-7xl px-4 py-16 scroll-mt-24">
       <h2 className="mb-8 text-center heading-bebas text-5xl md:text-6xl">Team</h2>
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {MEMBERS.map((m, idx) => (
-          <article key={`${m.name}-${idx}`} className="text-center">
+          <article key={`${m.name}-${idx}`} className="text-center flex-shrink-0">
             <div className="mx-auto w-[190px]">
               <Image
                 src={m.photo}
