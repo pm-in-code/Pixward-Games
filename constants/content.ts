@@ -38,6 +38,6 @@ export const METRICS = [
 export const SOCIALS = [
   { name: 'X', href: 'https://x.com/PixwardG', icon: 'twitter' },
   { name: 'Telegram', href: 'https://t.me', icon: 'telegram' },
-  { name: 'Twitch', href: 'https://twitch.tv', icon: 'twitch' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/pixward-games/', icon: 'linkedin' },
 ];
 
