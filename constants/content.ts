@@ -38,6 +38,6 @@ export const METRICS = [
 export const SOCIALS = [
   { name: 'X', href: 'https://x.com', icon: 'twitter' },
   { name: 'Telegram', href: 'https://t.me', icon: 'telegram' },
-  { name: 'YouTube', href: 'https://youtube.com', icon: 'youtube' },
+  { name: 'Twitch', href: 'https://twitch.tv', icon: 'twitch' },
 ];
 
