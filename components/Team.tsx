@@ -1,26 +1,24 @@
 import Image from 'next/image';
 
-// Assets exported from Figma MCP for Team block
-const imgVadym = 'http://localhost:3845/assets/6f1089aa231c1a0d9eea0de793580b7d403eba89.png';
-const imgRoman = 'http://localhost:3845/assets/29bff4be12a190970131811367f53382bdd98f5c.png';
-const imgKamila = 'http://localhost:3845/assets/33085e6f949b7d19c1646a174f331cc8c676f755.png';
-const imgAndy = 'http://localhost:3845/assets/611748b217e350fc307f99e7db8d5a37d4958c91.png';
-const imgDima = 'http://localhost:3845/assets/9385dbbcfb21ba773f08fd709144b0247d6c0c73.png';
+import Vadym from '@/public/assets/images/team/Vadym.webp';
+import Roman from '@/public/assets/images/team/Roman.webp';
+import Kamila from '@/public/assets/images/team/Kamila.webp';
+import Andy from '@/public/assets/images/team/Andy.webp';
+import Dima from '@/public/assets/images/team/Dima.webp';
 
 type Member = {
   name: string;
   title: string;
   note?: string;
-  photo: string;
+  photo: any;
 };
 
 const MEMBERS: Member[] = [
-  { name: 'Vadym', title: 'CEO', photo: imgVadym },
-  { name: 'Roman', title: 'Blockchain Lead', note: 'Ex-Axel', photo: imgRoman },
-  { name: 'Kamila', title: 'Co-Founder', note: 'Ex-GameLoft', photo: imgKamila },
-  { name: 'Andy', title: 'CPO', note: 'Ex-SnapChat', photo: imgAndy },
-  { name: 'Dima', title: 'PM', photo: imgDima },
-  { name: 'Vadym', title: 'CEO', photo: imgVadym },
+  { name: 'Vadym', title: 'CEO', photo: Vadym },
+  { name: 'Roman', title: 'Blockchain Lead', note: 'Ex-Axel', photo: Roman },
+  { name: 'Kamila', title: 'Co-Founder', note: 'Ex-GameLoft', photo: Kamila },
+  { name: 'Andy', title: 'CPO', note: 'Ex-SnapChat', photo: Andy },
+  { name: 'Dima', title: 'PM', photo: Dima },
 ];
 
 export default function Team() {

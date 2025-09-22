@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { HERO } from '@/constants/content';
-
-// From Figma assets server
-const HERO_CUBE = 'http://localhost:3845/assets/9efc441acc2e5db7b70ffa015afa31def1d9af20.png';
+import Controller from '@/public/assets/images/Controller.webp';
 
 export default function Hero() {
   return (
@@ -25,8 +23,8 @@ export default function Hero() {
         </div>
         <div className="relative mx-auto w-full max-w-[520px] md:max-w-none">
           <Image
-            src={HERO_CUBE}
-            alt="3D neon cube joystick"
+            src={Controller}
+            alt="Controller"
             className="rounded-xl"
             width={642}
             height={614}

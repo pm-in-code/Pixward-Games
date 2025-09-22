@@ -8,10 +8,11 @@ import CarouselSlide from '@/components/CarouselSlide';
 import Team from '@/components/Team';
 import { SEO } from '@/constants/content';
 
-const IMG1 = 'http://localhost:3845/assets/3d14e4ed6e687863e48bffbea0201a0ec6f44701.png';
-const IMG2 = 'http://localhost:3845/assets/9d0ee63dbd8f4cc49d84345838975b16570ffa45.png';
+import IMG1 from '@/public/assets/BossFighters/BF_KeyArt.jpg';
+import IMG2 from '@/public/assets/Cubox/Cubox KeyArt.png';
+import IMG3 from '@/public/assets/Kingless Land/KL_KeyArt_banner2.png';
+
 const SMALL_LOGO = 'http://localhost:3845/assets/eec6ce7eb84c50316f0eeabb307dc00da5b79e21.png';
-const IMG3 = 'http://localhost:3845/assets/3d14e4ed6e687863e48bffbea0201a0ec6f44701.png';
 
 export default function HomePage() {
   return (
