@@ -16,7 +16,7 @@ import IMG3 from '@/public/assets/Kingless Land/KL_KeyArt_banner2.png';
 // Логотипы игр
 import BOSS_FIGHTERS_LOGO from '@/public/assets/BossFighters/BFAward1.png';
 import CUBOX_LOGO from '@/public/assets/Cubox/CuboxLogo.png';
-import KINGLESS_LOGO from '@/public/assets/Kingless Land/fractions.png';
+import KINGLESS_LOGO from '@/public/assets/Kingless Land/kingless-logo.svg';
 
 export default function HomePage() {
   return (

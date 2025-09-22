@@ -1,0 +1,28 @@
+<svg width="96" height="40" viewBox="0 0 96 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="96" height="40" rx="4" fill="url(#backgroundGradient)"/>
+  
+  <!-- Decorative border -->
+  <rect x="2" y="2" width="92" height="36" rx="2" fill="none" stroke="url(#goldGradient)" stroke-width="1"/>
+  
+  <!-- Main K letter -->
+  <text x="48" y="28" font-family="serif" font-size="24" font-weight="bold" text-anchor="middle" fill="url(#goldGradient)">K</text>
+  
+  <!-- Decorative flourishes -->
+  <path d="M8 8 Q12 6 16 8 Q20 10 16 12 Q12 14 8 12" fill="url(#goldGradient)" opacity="0.7"/>
+  <path d="M80 8 Q84 6 88 8 Q92 10 88 12 Q84 14 80 12" fill="url(#goldGradient)" opacity="0.7"/>
+  <path d="M8 28 Q12 26 16 28 Q20 30 16 32 Q12 34 8 32" fill="url(#goldGradient)" opacity="0.7"/>
+  <path d="M80 28 Q84 26 88 28 Q92 30 88 32 Q84 34 80 32" fill="url(#goldGradient)" opacity="0.7"/>
+</svg>
