@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 type SlideProps = {
   heading: string;
@@ -12,6 +12,10 @@ type SlideProps = {
 
 export default function CarouselSlide({ heading, description, genres = ['Action', 'Strategy', 'RPG'], background, logo, images }: SlideProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const carouselRef = useRef<HTMLElement>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   
   // Use images array if provided, otherwise fallback to single background
   const carouselImages = images && images.length > 0 ? images : [background];
@@ -23,8 +27,63 @@ export default function CarouselSlide({ heading, description, genres = ['Action'
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
   };
+
+  // Intersection Observer to detect when carousel is visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.5 } // Trigger when 50% of the carousel is visible
+    );
+
+    if (carouselRef.current) {
+      observer.observe(carouselRef.current);
+    }
+
+    return () => {
+      if (carouselRef.current) {
+        observer.unobserve(carouselRef.current);
+      }
+    };
+  }, []);
+
+  // Auto-scroll logic
+  useEffect(() => {
+    if (isVisible && carouselImages.length > 1 && !isPaused) {
+      intervalRef.current = setInterval(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+      }, 2000); // 2 seconds interval
+    } else {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [isVisible, carouselImages.length, isPaused]);
+
+  // Pause auto-scroll on hover
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
   return (
-    <article className="relative overflow-hidden rounded-2xl bg-white/10">
+    <article 
+      ref={carouselRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative overflow-hidden rounded-2xl bg-white/10"
+    >
       <Image
         src={carouselImages[currentImageIndex]}
         alt={`${heading} background ${currentImageIndex + 1}`}
