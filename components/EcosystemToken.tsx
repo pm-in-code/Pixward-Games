@@ -27,9 +27,9 @@ export default function EcosystemToken() {
               <Image
                 src={TokenIcon}
                 alt="Ecosystem Token"
-                width={200}
-                height={200}
-                className="drop-shadow-2xl"
+                width={300}
+                height={300}
+                className="drop-shadow-2xl hover:scale-105 transition-transform duration-300"
               />
             </div>
           </div>
