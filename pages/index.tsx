@@ -13,13 +13,28 @@ import IMG1 from '@/public/assets/BossFighters/BF_KeyArt.jpg';
 import IMG2 from '@/public/assets/Cubox/Cubox KeyArt.png';
 import IMG3 from '@/public/assets/Kingless Land/KL_KeyArt_banner2.png';
 
-// Дополнительные изображения для карусели
+// Дополнительные изображения для карусели Boss Fighters
 import BF_SCREEN_1 from '@/public/assets/BossFighters/BF_Screen_1.jpg';
 import BF_SCREEN_2 from '@/public/assets/BossFighters/BF_Screen_2.jpg';
 import BF_SCREEN_3 from '@/public/assets/BossFighters/BF_Screen_3.jpg';
 import BF_VR_GIF from '@/public/assets/BossFighters/BF_Asymmetrical Multiplayer Battles_VR.gif';
 import BF_PHYSICS_GIF from '@/public/assets/BossFighters/BF_Physics-Based Combat and Environment Interaction.gif';
 import BF_WEAPONS_GIF from '@/public/assets/BossFighters/BF_Weapons & Gadgets Arsenal_PC.gif';
+
+// Изображения для Cubox.io
+import CUBOX_KEYART from '@/public/assets/Cubox/Cubox KeyArt.png';
+import CUBOX_LOGO_IMG from '@/public/assets/Cubox/CuboxLogo.png';
+
+// Изображения для Kingless Land
+import KL_SCREEN_1 from '@/public/assets/Kingless Land/01_scrn_english.png';
+import KL_SCREEN_2 from '@/public/assets/Kingless Land/02_scrn_english.png';
+import KL_SCREEN_3 from '@/public/assets/Kingless Land/03_scrn_english.png';
+import KL_SCREEN_4 from '@/public/assets/Kingless Land/04_scrn_english.png';
+import KL_SCREEN_5 from '@/public/assets/Kingless Land/05_scrn_english.png';
+import KL_SCREEN_6 from '@/public/assets/Kingless Land/06_scrn_english.png';
+import KL_SCREEN_7 from '@/public/assets/Kingless Land/07_scrn_english.png';
+import KL_BATTLE_FIELD from '@/public/assets/Kingless Land/battle_field_snow copy.png';
+import KL_FRACTIONS from '@/public/assets/Kingless Land/fractions.png';
 
 // Логотипы игр
 import BOSS_FIGHTERS_LOGO from '@/public/assets/BossFighters/BFAward1.png';
@@ -58,6 +73,7 @@ export default function HomePage() {
               heading="Cubox.io"
               description="Cubox.io is a thrilling adventure where you build, fight, and explore unique biomes. Choose paths like Winter or Hell, battle fierce monsters, and customize your playstyle with powerful gear. Lead armies, craft, and create your dream home. Join friends or guilds, conquer challenges, and uncover endless surprises in this ever-evolving world."
               background={IMG2}
+              images={[IMG2, CUBOX_KEYART, CUBOX_LOGO_IMG]}
               genres={["Action","Strategy","RPG"]}
               logo={CUBOX_LOGO}
             />
@@ -65,6 +81,7 @@ export default function HomePage() {
               heading="Kingless Land"
               description="Land Without a King is an open-world wargame where turn-based tactical battles, military strategy, and RPG mechanics intersect on equal footing. Choose your path from 6 character classes, build a mighty army, and claim what is yours — by right of blood or by right of the sword!"
               background={IMG3}
+              images={[IMG3, KL_SCREEN_1, KL_SCREEN_2, KL_SCREEN_3, KL_SCREEN_4, KL_SCREEN_5, KL_SCREEN_6, KL_SCREEN_7, KL_BATTLE_FIELD, KL_FRACTIONS]}
               genres={["Action","Strategy","RPG"]}
               logo={KINGLESS_LOGO}
             />
