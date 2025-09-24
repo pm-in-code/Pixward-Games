@@ -13,6 +13,14 @@ import IMG1 from '@/public/assets/BossFighters/BF_KeyArt.jpg';
 import IMG2 from '@/public/assets/Cubox/Cubox KeyArt.png';
 import IMG3 from '@/public/assets/Kingless Land/KL_KeyArt_banner2.png';
 
+// Дополнительные изображения для карусели
+import BF_SCREEN_1 from '@/public/assets/BossFighters/BF_Screen_1.jpg';
+import BF_SCREEN_2 from '@/public/assets/BossFighters/BF_Screen_2.jpg';
+import BF_SCREEN_3 from '@/public/assets/BossFighters/BF_Screen_3.jpg';
+import BF_VR_GIF from '@/public/assets/BossFighters/BF_Asymmetrical Multiplayer Battles_VR.gif';
+import BF_PHYSICS_GIF from '@/public/assets/BossFighters/BF_Physics-Based Combat and Environment Interaction.gif';
+import BF_WEAPONS_GIF from '@/public/assets/BossFighters/BF_Weapons & Gadgets Arsenal_PC.gif';
+
 // Логотипы игр
 import BOSS_FIGHTERS_LOGO from '@/public/assets/BossFighters/BFAward1.png';
 import CUBOX_LOGO from '@/public/assets/Cubox/CuboxLogo.png';
@@ -42,6 +50,7 @@ export default function HomePage() {
               heading="Boss Fighters"
               description="$BFT is the only utility token in BOSS FIGHTERS, fuelling the player-driven economy. Collect $BFT by playing with limited-supply Badges, which generate token rewards and can be upgraded for increased rarity and token yield."
               background={IMG1}
+              images={[IMG1, BF_SCREEN_1, BF_SCREEN_2, BF_SCREEN_3, BF_VR_GIF, BF_PHYSICS_GIF, BF_WEAPONS_GIF]}
               genres={["Action","Strategy","RPG"]}
               logo={BOSS_FIGHTERS_LOGO}
             />

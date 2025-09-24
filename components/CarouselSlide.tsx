@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useState } from 'react';
 
 type SlideProps = {
   heading: string;
@@ -6,17 +7,30 @@ type SlideProps = {
   genres?: string[];
   background: string; // remote image url
   logo?: string; // top-right small logo
+  images?: string[]; // array of images for carousel
 };
 
-export default function CarouselSlide({ heading, description, genres = ['Action', 'Strategy', 'RPG'], background, logo }: SlideProps) {
+export default function CarouselSlide({ heading, description, genres = ['Action', 'Strategy', 'RPG'], background, logo, images }: SlideProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Use images array if provided, otherwise fallback to single background
+  const carouselImages = images && images.length > 0 ? images : [background];
+  
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+  };
+  
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
   return (
     <article className="relative overflow-hidden rounded-2xl bg-white/10">
       <Image
-        src={background}
-        alt={`${heading} background`}
+        src={carouselImages[currentImageIndex]}
+        alt={`${heading} background ${currentImageIndex + 1}`}
         width={1708}
         height={732}
-        className="aspect-[16/9] h-auto w-full object-cover"
+        className="aspect-[16/9] h-auto w-full object-cover transition-opacity duration-300"
         priority={false}
       />
       {/* dark gradient like in Figma card */}
@@ -44,12 +58,36 @@ export default function CarouselSlide({ heading, description, genres = ['Action'
         ) : null}
         <p className="mt-3 text-white/85 text-sm md:text-base leading-relaxed">{description}</p>
 
-        {/* bottom controls mimic */}
+        {/* bottom controls - now functional */}
         <div className="mt-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <button aria-label="previous" className="h-8 w-8 rounded-full bg-white/10 hover:bg-white/20">‹</button>
-            <button aria-label="next" className="h-8 w-8 rounded-full bg-white/10 hover:bg-white/20">›</button>
-            <span className="ml-2 inline-block h-2 w-2 rounded-full bg-white/60" />
+            <button 
+              onClick={prevImage}
+              aria-label="previous" 
+              className="h-8 w-8 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              disabled={carouselImages.length <= 1}
+            >
+              ‹
+            </button>
+            <button 
+              onClick={nextImage}
+              aria-label="next" 
+              className="h-8 w-8 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              disabled={carouselImages.length <= 1}
+            >
+              ›
+            </button>
+            {/* Image indicator dots */}
+            <div className="ml-2 flex gap-1">
+              {carouselImages.map((_, index) => (
+                <span 
+                  key={index}
+                  className={`inline-block h-2 w-2 rounded-full transition-colors ${
+                    index === currentImageIndex ? 'bg-white' : 'bg-white/60'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
           <a href="#cta" className="rounded-full bg-white/15 backdrop-blur px-5 py-2 text-sm font-medium hover:bg-white/25">
             Pre-registration
