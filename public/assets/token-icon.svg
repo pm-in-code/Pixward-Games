@@ -1,0 +1,47 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gold gradient for the token -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Lightning bolt gradient -->
+    <linearGradient id="lightningGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE55C;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow gradient -->
+    <radialGradient id="shadowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Shadow -->
+  <ellipse cx="100" cy="180" rx="60" ry="15" fill="url(#shadowGradient)" />
+  
+  <!-- Outer hexagon -->
+  <path d="M 100 20 L 140 40 L 140 80 L 100 100 L 60 80 L 60 40 Z" 
+        fill="url(#goldGradient)" 
+        stroke="#B8860B" 
+        stroke-width="2" />
+  
+  <!-- Inner hexagon (recessed) -->
+  <path d="M 100 35 L 125 50 L 125 70 L 100 85 L 75 70 L 75 50 Z" 
+        fill="url(#goldGradient)" 
+        opacity="0.8" />
+  
+  <!-- Lightning bolt -->
+  <path d="M 85 60 L 95 60 L 90 70 L 105 70 L 100 80 L 90 80 L 95 70 L 80 70 Z" 
+        fill="url(#lightningGradient)" />
+  
+  <!-- Highlight on top edge -->
+  <path d="M 100 20 L 140 40 L 100 100 L 60 40 Z" 
+        fill="url(#goldGradient)" 
+        opacity="0.3" />
+</svg>

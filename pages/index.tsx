@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import CarouselSlide from '@/components/CarouselSlide';
 import Team from '@/components/Team';
 import PreRegistrationForm from '@/components/PreRegistrationForm';
+import EcosystemToken from '@/components/EcosystemToken';
 import { SEO } from '@/constants/content';
 
 import IMG1 from '@/public/assets/BossFighters/BF_KeyArt.jpg';
@@ -87,6 +88,7 @@ export default function HomePage() {
             />
           </div>
         </section>
+        <EcosystemToken />
         <Features />
         <Team />
         <Metrics />
