@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 // Импорт иконки токена
-import TokenIcon from '@/public/assets/token-icon.svg';
+import TokenIcon from '@/public/assets/images/Rectangle.png';
 
 export default function EcosystemToken() {
   return (
@@ -27,8 +27,8 @@ export default function EcosystemToken() {
               <Image
                 src={TokenIcon}
                 alt="Ecosystem Token"
-                width={300}
-                height={300}
+                width={360}
+                height={360}
                 className="drop-shadow-2xl hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -79,9 +79,9 @@ export default function EcosystemToken() {
               </p>
             </div>
 
-            <div className="flex items-center gap-4 rounded-full bg-purple-500/20 px-6 py-4">
+            <div className="flex items-center justify-center gap-4 rounded-full bg-purple-500/20 px-6 py-4">
               <div className="h-3 w-3 rounded-full bg-purple-500" />
-              <p className="text-white">
+              <p className="text-white text-center">
                 Robust Web2 and <span className="font-bold text-green-400">Web3 Monetisation</span> for diverse and sustainable revenue stream.
               </p>
             </div>
@@ -94,21 +94,21 @@ export default function EcosystemToken() {
               {/* Pie Chart */}
               <div className="relative h-32 w-32">
                 <svg viewBox="0 0 100 100" className="h-full w-full">
-                  {/* 70% Player Rewards - Light Blue */}
+                  {/* 70% Player Rewards - Light Blue (252 degrees) */}
                   <path
-                    d="M 50 50 L 50 0 A 50 50 0 1 1 15.45 85.45 Z"
+                    d="M 50 50 L 50 0 A 50 50 0 1 1 2.45 65.45 Z"
                     fill="#60A5FA"
                     className="drop-shadow-lg"
                   />
-                  {/* 20% Marketing & Community - Yellow */}
+                  {/* 20% Marketing & Community - Yellow (72 degrees) */}
                   <path
-                    d="M 50 50 L 15.45 85.45 A 50 50 0 0 1 50 50 Z"
+                    d="M 50 50 L 2.45 65.45 A 50 50 0 0 1 20.6 9.55 Z"
                     fill="#FDE047"
                     className="drop-shadow-lg"
                   />
-                  {/* 10% Ecosystem & Liquidity - Pink */}
+                  {/* 10% Ecosystem & Liquidity - Pink (36 degrees) */}
                   <path
-                    d="M 50 50 L 50 0 A 50 50 0 0 1 50 50 Z"
+                    d="M 50 50 L 20.6 9.55 A 50 50 0 0 1 50 0 Z"
                     fill="#F472B6"
                     className="drop-shadow-lg"
                   />
